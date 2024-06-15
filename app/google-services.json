@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "972822715982",
+    "project_id": "projob-7095e",
+    "storage_bucket": "projob-7095e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:972822715982:android:b588835caa64acb0c0ed1f",
+        "android_client_info": {
+          "package_name": "com.ssc.projob"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9cTE8M5YXj6eCEWvMFKI6Pu61f7jJzQI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ProJob" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">#6ad61d</item>
+        <item name="colorPrimaryDark">@color/white</item>
+<!--        <item name="colorAccent">@color/black</item>-->
+
+    </style>
+<!--    <style name="mybutton">-->
+<!--        <item name="backgroundColor"></item>-->
+<!--        <item name="background">#6ad61d</item>-->
+<!--    </style>-->
+
+    <style name="Theme.ProJob" parent="Base.Theme.ProJob" />
+</resources>
