@@ -1,6 +1,5 @@
 package com.ssc.projob.register
 
-
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
@@ -13,9 +12,11 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.google.firebase.firestore.ktx.firestore
 import com.ssc.projob.MainActivity
 import com.ssc.projob.R
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class RegisterPassword : AppCompatActivity() {
 
@@ -25,7 +26,6 @@ class RegisterPassword : AppCompatActivity() {
     private lateinit var editTextConfirmPassword: EditText
     private lateinit var btnSetPassword: Button
     private lateinit var textViewLogin: TextView
-
 
     private lateinit var auth: FirebaseAuth
     private var selectedRole: String = ""
@@ -40,7 +40,6 @@ class RegisterPassword : AppCompatActivity() {
         editTextConfirmPassword = findViewById(R.id.editTextConfirmPassword)
         btnSetPassword = findViewById(R.id.btnSetPassword)
         textViewLogin = findViewById(R.id.textViewLogin)
-
 
         auth = Firebase.auth
 
@@ -90,33 +89,36 @@ class RegisterPassword : AppCompatActivity() {
 
         val user = auth.currentUser
         if (user != null) {
-            // Here you would typically save the password securely and complete the registration process
-            saveUserData(user, password)
+            // Save user data to MongoDB via backend service
+            saveUserData(user.uid, user.phoneNumber, password)
         }
     }
 
-    private fun saveUserData(user: FirebaseUser, password: String) {
-        val db = Firebase.firestore
-        val userData = hashMapOf(
-            "uid" to user.uid,
-            "phone" to user.phoneNumber,
-            "role" to selectedRole,
-            "password" to password // Note: Store passwords securely in real applications
-        )
+    private fun saveUserData(uid: String, phoneNumber: String?, password: String) {
+        val retrofit = RetrofitClient.getClient("http://10.85.174.76:5000")
+        val apiService = retrofit.create(ApiService::class.java)
 
-        db.collection("users")
-            .document(user.uid)
-            .set(userData)
-            .addOnSuccessListener {
-                Toast.makeText(this, "User registered successfully", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-                finish()
+        val user = User(uid, phoneNumber ?: "", selectedRole, password)
+
+        val call = apiService.registerUser(user)
+        call.enqueue(object : Callback<User> {
+            override fun onResponse(call: Call<User>, response: Response<User>) {
+                if (response.isSuccessful) {
+                    Toast.makeText(this@RegisterPassword, "User registered successfully", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this@RegisterPassword, MainActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                } else {
+                    Toast.makeText(this@RegisterPassword, "Failed to register user", Toast.LENGTH_SHORT).show()
+                }
             }
-            .addOnFailureListener { e ->
-                Toast.makeText(this, "Failed to register user: ${e.message}", Toast.LENGTH_SHORT).show()
+
+            override fun onFailure(call: Call<User>, t: Throwable) {
+                Toast.makeText(this@RegisterPassword, "Failed to register user: ${t.message}", Toast.LENGTH_SHORT).show()
             }
+        })
     }
+
     private fun navigateToLogin() {
         val intent = Intent(this, LogIn::class.java)
         startActivity(intent)
