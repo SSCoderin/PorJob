@@ -6,4 +6,3 @@ data class User(
     val role: String,
     val password: String
 )
-

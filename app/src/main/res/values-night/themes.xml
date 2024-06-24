@@ -4,6 +4,8 @@
         <!-- Customize your dark theme here. -->
          <item name="colorPrimary">#6ad61d</item>
                 <item name="colorPrimaryDark">@color/black</item>
+                <item name="colorAccent">#6ad61d</item>
+
 
     </style>
 </resources>

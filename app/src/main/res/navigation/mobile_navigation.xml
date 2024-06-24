@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.ssc.projob.ui.user_dashboard.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.ssc.projob.ui.profile.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.ssc.projob.ui.my_resume.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/message2"
+        android:name="com.ssc.projob.ui.message.Message"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" />
+    <fragment
+        android:id="@+id/myApplied"
+        android:name="com.ssc.projob.ui.my_applied.MyApplied"
+        android:label="fragment_my_applied"
+        tools:layout="@layout/fragment_my_applied" />
+    <fragment
+        android:id="@+id/meeting"
+        android:name="com.ssc.projob.ui.meeting.meeting"
+        android:label="fragment_meeting"
+        tools:layout="@layout/fragment_meeting" />
+    <fragment
+        android:id="@+id/follow_Employe"
+        android:name="com.ssc.projob.ui.following_employes.Follow_Employe"
+        android:label="fragment_follow__employe"
+        tools:layout="@layout/fragment_follow__employe" />
+    <fragment
+        android:id="@+id/alert_Jobs"
+        android:name="com.ssc.projob.ui.alert_jobs.Alert_Jobs"
+        android:label="fragment_alert__jobs"
+        tools:layout="@layout/fragment_alert__jobs" />
+</navigation>

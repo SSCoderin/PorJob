@@ -17,6 +17,7 @@ import com.google.firebase.auth.PhoneAuthProvider
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.ssc.projob.R
+import com.ssc.projob.dashboard
 
 class LogIn : AppCompatActivity() {
 
@@ -69,7 +70,7 @@ class LogIn : AppCompatActivity() {
                     val storedPassword = document.getString("password")
                     if (storedPassword == inputPassword) {
                         Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show()
-                        val intent = Intent(this, MainActivity::class.java)
+                        val intent = Intent(this, dashboard::class.java)
                         startActivity(intent)
                         finish()
                     } else {

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/baseline_dashboard_24"
+            android:title="User Dashboard" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/baseline_account_circle_24"
+            android:title="Profile" />
+
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/baseline_description_24"
+            android:title="My Resume" />
+        <item
+            android:id="@+id/myApplied"
+            android:icon="@drawable/baseline_fact_check_24"
+            android:title="My Applied" />
+        <item
+            android:id="@+id/follow_Employe"
+            android:icon="@drawable/baseline_contact_page_24"
+            android:title="Following Employers" />
+        <item
+            android:id="@+id/alert_Jobs"
+            android:icon="@drawable/baseline_crisis_alert_24"
+            android:title="Alert Jobs" />
+        <item
+            android:id="@+id/message2"
+            android:icon="@drawable/baseline_forum_24"
+            android:title="Message" />
+        <item
+            android:id="@+id/meeting"
+            android:icon="@drawable/baseline_connect_without_contact_24"
+            android:title="Meeting" />
+
+
+
+    </group>
+</menu>

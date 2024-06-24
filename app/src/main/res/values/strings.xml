@@ -1,3 +1,122 @@
 <resources>
     <string name="app_name">ProJob</string>
+    <string name="title_activity_dashboard">dashboard</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string-array name="sort_by_options">
+        <item>Default</item>
+        <item>Newest</item>
+        <item>Oldest</item>
+    </string-array>
+
+
+
+    <string-array name="gender_array">
+        <item>none</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="age_array">
+        <item>none</item>
+        <item>10-12</item>
+        <item>13-15</item>
+        <item>16-18</item>
+        <item>18-20</item>
+        <item>20-25</item>
+        <item>25-30</item>
+        <item>30-45</item>
+        <item>45-50</item>
+
+
+    </string-array>
+
+    <string-array name="qualification_array">
+        <item>B.Tech</item>
+        <item>B.Com</item>
+        <item>B.Sc</item>
+        <item>M.Tech</item>
+        <item>MBA</item>
+        <item>PhD</item>
+        <item>M.Com</item>
+        <item>Diploma</item>
+        <item>BBA</item>
+        <item>LLB</item>
+        <item>LLM</item>
+        <item>MD</item>
+        <item>MBBS</item>
+        <item>BDS</item>
+        <!-- Add more specialization items -->
+    </string-array>
+
+    <string-array name="experience_time_array">
+        <item>Less than 1 year</item>
+        <item>1 years</item>
+        <item>2 years</item>
+        <item>3 years</item>
+        <item>4 years</item>
+        <item>5 years</item>
+        <item>6 years</item>
+        <item>7 years</item>
+        <item>8 years</item>
+        <item>9 years</item>
+        <item>10 years</item>
+        <!-- Add more experience time items -->
+    </string-array>
+
+    <string-array name="salary_type_array">
+        <item>Per Hour</item>
+        <item>Per Day</item>
+        <item>Per Week</item>
+        <item>Per Month</item>
+        <item>Per Year</item>
+        <!-- Add more salary type items -->
+    </string-array>
+
+    <string-array name="industry_array">
+        <item>Information Technology</item>
+        <item>Finance</item>
+        <item>Healthcare</item>
+        <item>Education</item>
+        <item>Manufacturing</item>
+        <item>Retail</item>
+        <item>Travel</item>
+        <item>Hospitality</item>
+        <item>Energy</item>
+        <item>Logistics</item>
+        <item>Marketing</item>
+        <item>Sales</item>
+        <item>Construction</item>
+        <!-- Add more industry items -->
+    </string-array>
+
+    <string-array name="language_array">
+        <item>English</item>
+        <item>Spanish</item>
+        <item>Hindi</item>
+        <item>Bengali</item>
+        <item>Telugu</item>
+        <item>Marathi</item>
+        <item>Gujarati</item>
+        <item>Kannada</item>
+        <item>Malayalam</item>
+        <item>Tamil</item>
+        <item>Urdu</item>
+        <item>Punjabi</item>
+        <item>Assamese</item>
+        <item>Bengali</item>
+        <!-- Add more language items -->
+    </string-array>
+
+    <!-- Define any other arrays needed -->
 </resources>

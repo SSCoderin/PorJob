@@ -2,15 +2,24 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.ProJob" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-         <item name="colorPrimary">#6ad61d</item>
+        <item name="colorPrimary">#6ad61d</item>
         <item name="colorPrimaryDark">@color/white</item>
-<!--        <item name="colorAccent">@color/black</item>-->
+        <!--        <item name="colorAccent">@color/black</item>-->
 
     </style>
-<!--    <style name="mybutton">-->
-<!--        <item name="backgroundColor"></item>-->
-<!--        <item name="background">#6ad61d</item>-->
-<!--    </style>-->
+    <!--    <style name="mybutton">-->
+    <!--        <item name="backgroundColor"></item>-->
+    <!--        <item name="background">#6ad61d</item>-->
+    <!--    </style>-->
 
     <style name="Theme.ProJob" parent="Base.Theme.ProJob" />
+
+    <style name="Theme.ProJob.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.ProJob.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.ProJob.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
